@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>  
+<html>  
+ 
+ <button type="button" onclick="showFile()">Click Me!</button>
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script>
+ 
+ function showFile(){
+	alert("Going");
+	data=readFile("hello.txt");
+	alert(data);
+	}
+ function readFile(filename){  
+	s=''
+	try{
+    jQuery.get('http://localhost:8080/hello.txt', function(data) {
+    s=data;
+	});
+	}
+	catch(err){
+		alert(err.message);
+	}
+    return s;  
+}  
+
+</script>
+</html> 

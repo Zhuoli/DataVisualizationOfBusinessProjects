@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		hahahaha
+        <meta charset="gb2312" />
+        <title></title>
+        <style>
+            .wrap {
+                position:relative;
+            }
+            .inner {
+                display:none;
+                position:absolute; top:30px; left:100px;
+                width:100px; height:100px;
+                border:1px solid #000;
+                background:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <img src="tomcat.gif" />
+            <div class="inner">
+               neirong
+            </div>
+        </div>
+        <script>
+            var $ = function(id){
+                return document.getElementById(id);
+            };
+            var $t = function(tag, cot){
+                cot = cot || document;
+                return cot.getElementsByTagName(tag);
+            };
+            $t('img')[0].onmouseover = function(){
+                $t('div', this.parentNode)[0].style.display = 'block';
+            }
+            $t('img')[0].onmouseout = function(){
+                $t('div', this.parentNode)[0].style.display = 'none';
+            }            
+        </script>
+    </body>
+</html>

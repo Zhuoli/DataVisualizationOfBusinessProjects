@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<link rel="stylesheet" href="style.css">
+	<head>
+				<b>Drag the project image into the rectangle:</b>
+	</head>
+	<script type="text/javascript" src="myscript.js" ></script>
+	<body class="body">
+		<div style="width: 70%;margin: 0 auto;">
+			<div id="album" class="album">  
+				<h2>Projects</h2> 
+				<img id="project1" src="a1.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project2" src="a2.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project3" src="a3.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project4" src="a4.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69">
+			</div>
+			
+			<div id="div1" class="automator" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<h2>Automator</h2>
+			</div>
+			<div id="report"  class="report">  
+				<h2>Report</h2> 
+			</div>
+			<div id="avators"  class="avators">  
+				<h2>Team Members</h2> 
+			</div>
+		<div>
+		<div id="Graph" align="left" style="clear:left;">
+			<iframe id="frameDiv" src="about:blank" style="float:left;" height=500px width=100% scrolling="no"></iframe>
+			<iframe id="frameNet" src="about:blank" height=500px width=500px scrolling="no"></iframe>
+		</div>
+	</body>
+</html>
