@@ -11,6 +11,8 @@
 	var count=0
 	var data=null
 	var project="project1"
+    
+	
 	function allowDrop(ev) {
 		ev.preventDefault();
 	}
@@ -38,15 +40,41 @@
 		jQuery.get('http://localhost:8080/' + project + '/Names.txt', function(data) {
 			var members=data.split(',');
 			var container = document.getElementById("avators");
+			var imgs= [];
 			for(var i=0;i<members.length;i++){
 				var path="avatars/"+members[i]+".jpg";
-				var image = new Image();
-				image.src=path;
-				image.width=100;
-				image.width=100;
-				container.appendChild(image);
+				imgs.push(document.createElement("IMG"));
+				imgs[i].src=path;
+				imgs[i].width=100;
+				imgs[i].width=100;
+				imgs[i].id=members[i];				
+				container.appendChild(imgs[i]);
+				assignOnMous(members[i]);
+				assignOutMous(members[i],path);
 			}
 		});
+	}
+	function assignOutMous(id,path){
+		image=document.getElementById(id);
+		stats=document.createElement("IMG");
+		stats.src="project1/rect.png";
+		
+		image.onmouseout=function(){
+			image=document.getElementById(id);
+			if(image.src!=path){
+				image.src=path;
+			}
+		}
+	}
+	function assignOnMous(id){
+		image=document.getElementById(id);
+		image.onmouseover=function(){
+			image=document.getElementById(id);
+			var path = "project1/rect.png";
+			if(image.src!=path){
+				image.src=path;
+			}
+		}
 	}
 
 
@@ -72,7 +100,6 @@
 		
 	} 
 	function drawGraph(data){
-		alert("Gonna Show: "+data);
 		run();
 	}
 	function run(){
