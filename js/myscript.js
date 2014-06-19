@@ -106,3 +106,4 @@
 		document.getElementById("frameDiv").src="/" + project + "/graph.html"
 		document.getElementById("frameNet").src="/" + project + "/email_networks.html"
 	}
+

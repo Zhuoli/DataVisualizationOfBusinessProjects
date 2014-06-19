@@ -1,18 +1,39 @@
 <!DOCTYPE HTML>
 <html>
-	<link rel="stylesheet" href="style.css">
 	<head>
-				<b>Drag the project image into the rectangle:</b>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Simulator | Real-time Project Feedback</title>
+		<meta name="description" content="A sample demo for AI Knowledge System">
+		<meta name="author" content="Zhuoli Liang">
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Remember, Modernizr takes care of our no-js to js class swap -->
+		<script src="js/libs/modernizr-1.7.min.js"></script>
 	</head>
-	<script type="text/javascript" src="myscript.js" ></script>
+
+
+	
+
 	<body class="body">
+		<script type="text/javascript" src="js/myscript.js" ></script>
+		<div id="container">
+			<header>
+				<h1>Simulator</h1>
+				<p>real-time project evaluating:</p>
+			</header>
+			<ul id="dribbble-shots" class="portfolio">
+			</ul>
+		</div> <!-- eo #container -->
 		<div style="width: 70%;margin: 0 auto;">
 			<div id="album" class="album">  
 				<h2>Projects</h2> 
-				<img id="project1" src="a1.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
-				<img id="project2" src="a2.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
-				<img id="project3" src="a3.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
-				<img id="project4" src="a4.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69">
+				<img id="project1" src="imgs/a1.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project2" src="imgs/a2.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project3" src="imgs/a3.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69"><br>
+				<img id="project4" src="imgs/a4.jpg" draggable="true" ondragstart="drag(event)" width="100" height="69">
 			</div>
 			
 			<div id="div1" class="automator" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -29,5 +50,34 @@
 			<iframe id="frameDiv" src="about:blank" style="float:left;" height=500px width=100% scrolling="no"></iframe>
 			<iframe id="frameNet" src="about:blank" height=500px width=500px scrolling="no"></iframe>
 		</div>
+			<!-- Our template for each shot -->
+		<script id="shot-template" type="text/html">
+		<li>
+			<a href="${url}"><img src="${image_teaser_url}" alt="" /></a>
+			<div class="portfolio-info-panel">
+				<h2>${title}</h2>
+				<p><a href="${short_url}">${short_url}</a></p>
+			</div>
+		</li>
+		</script>
+
+		<!-- jQuery -->
+		<script src="js/libs/jquery-1.6.2.js"></script>
+		
+		<!-- Our templating library -->
+		<script src="js/libs/jquery.tmpl.js"></script>
+		
+		<!-- The doTimeout Plugin -->
+		<script src="js/libs/jquery.ba-dotimeout.js"></script>
+		
+		<!-- You should be able to remove the following three lines in production
+			 and everything should still work -->
+		
+		<script src="js/libs/jquery.mockjax.js"></script>
+		<script src="mocks/johnneiner.js"></script>
+		<script src="mocks/mocks.js"></script>
+		
+		<!-- Our primary script file -->
+		<script src="js/script.js"></script>
 	</body>
 </html>
