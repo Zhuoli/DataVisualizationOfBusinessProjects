@@ -40,17 +40,27 @@
 		jQuery.get('http://localhost:8080/' + project + '/Names.txt', function(data) {
 			var members=data.split(',');
 			var container = document.getElementById("avators");
-			var imgs= [];
 			for(var i=0;i<members.length;i++){
 				var path="avatars/"+members[i]+".jpg";
-				imgs.push(document.createElement("IMG"));
-				imgs[i].src=path;
-				imgs[i].width=100;
-				imgs[i].width=100;
-				imgs[i].id=members[i];				
-				container.appendChild(imgs[i]);
-				assignOnMous(members[i]);
-				assignOutMous(members[i],path);
+				img=document.createElement("IMG");
+				img.src=path;
+				img.width=100;
+				img.width=100;
+				img.id=members[i];			
+				
+				var li=document.createElement("li");
+				li.appendChild(img);
+				
+				var div=document.createElement("div");
+				div.style.opacity=1;
+				div.style.display="none";
+				div.setAttribute('class','portfolio-info-panel');
+				
+				var pa=document.createTextNode("Hi there and greetings!");
+				div.appendChild(pa);
+				
+				li.appendChild(div);
+				container.appendChild(li);
 			}
 		});
 	}

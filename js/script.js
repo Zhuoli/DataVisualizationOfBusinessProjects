@@ -111,20 +111,20 @@ function third_try() {
 
 function fourth_try() {
 	$( "#avators" )
-		.delegate( "li", "mouseenter", function ( e ) {
-			var $li = $( this );
+		.delegate( "IMG", "mouseenter", function ( e ) {
+			var $IMG = $( this );
 
-			$li.doTimeout( "hoverOut" );
-			$li.doTimeout( "hoverIn", 500, function () {
-				$li.find( "div" ).fadeTo( 200, 1.0 );
+			$IMG.doTimeout( "hoverOut" );
+			$IMG.doTimeout( "hoverIn", 500, function () {
+				$IMG.find( "div" ).fadeTo( 200, 1.0 );
 			});
 		})
-		.delegate( "li", "mouseleave", function ( e ) {
-			var $li = $( this );
+		.delegate( "IMG", "mouseleave", function ( e ) {
+			var $IMG = $( this );
 
-			$li.doTimeout( "hoverIn" );
-			$li.doTimeout( "hoverOut", 500, function () {
-				$li.find( "div" ).stop( true ).fadeOut();
+			$IMG.doTimeout( "hoverIn" );
+			$IMG.doTimeout( "hoverOut", 500, function () {
+				$IMG.find( "div" ).stop( true ).fadeOut();
 			});
 		});
 }
@@ -153,13 +153,13 @@ function fourth_try() {
 ************************************************************/
 
 function final_code() {
-	var li_cache, over = false;
+	var IMG_cache, over = false;
 
 	$( "#avators" )
-		.delegate( "li", "mouseenter", function ( e ) {
-			var $li = $( this ), speed;
+		.delegate( "IMG", "mouseenter", function ( e ) {
+			var $IMG = $( this ), speed;
 
-			if ( li_cache === this && over ) {
+			if ( IMG_cache === this && over ) {
 				$.doTimeout( "hoverOut" );
 				return;
 			}
@@ -174,16 +174,16 @@ function final_code() {
 
 			$.doTimeout( "hoverIn", speed, function () {
 				over = true;
-				$li.find( "div" ).fadeTo( 200, 1.0 );
+				$IMG.find( "div" ).fadeTo( 200, 1.0 );
 			});
 		})
-		.delegate( "li", "mouseleave", function ( e ) {
-			var $li = $( this );
+		.delegate( "IMG", "mouseleave", function ( e ) {
+			var $IMG = $( this );
 
 			$.doTimeout( "hoverIn" );
 			$.doTimeout( "hoverOut", 500, function () {
 				over = false;
-				$li.find( "div" ).stop( true ).fadeOut();
+				$IMG.find( "div" ).stop( true ).fadeOut();
 			});
 		});
 }
