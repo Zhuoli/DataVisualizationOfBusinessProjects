@@ -78,16 +78,7 @@ header p {
         padding: 10px;  
         width: 30%; 
 	}
-.portfolio {
-	width: 690px;
-	margin: 40px auto;
-	list-style: none;
-	padding: 0;
-	position: relative;
-	left: 10px;
-}
-
-.portfolio li {
+	.avators li {
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -99,10 +90,10 @@ header p {
 	position: relative;
 }
 
-.portfolio li img,
-.portfolio li span.placeholder-image {
-	width: 200px;
-	height: 150px;
+.avators li img,
+.avators li span.placeholder-image {
+	width: 100px;
+	height: 100px;
 	background: #3b1702;
 	margin: 0;
 	padding: 0;
@@ -140,11 +131,21 @@ header p {
 	font-size: 24px;
 	color: rgb(255,191,59);
 }
+.portfolio-info-panel  img,
+.portfolio-info-panel  span.placeholder-image {
+	width: 200px;
+	height: 150px;
+	background: #3b1702;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
 
 .portfolio-info-panel a {
 	color: #ccc;
 	text-decoration: none;
 }
+
 
 .portfolio-info-panel a:hover {
 	text-decoration: underline;

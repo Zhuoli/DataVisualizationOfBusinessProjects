@@ -160,24 +160,29 @@ function final_code() {
 			var $IMG = $( this ), speed;
 
 			if ( IMG_cache === this && over ) {
+				console.log("IMG_cache == this");
 				$.doTimeout( "hoverOut" );
 				return;
 			}
 
 			if ( over ) {
+				console.log("over");
 				$.doTimeout( "hoverOut", true );
 				speed = 0;
 			} else {
+				console.log("else ");
 				$.doTimeout( "hoverOut" );
 				speed = 500;
 			}
 
 			$.doTimeout( "hoverIn", speed, function () {
+				console.log("hoverIn");
 				over = true;
 				$IMG.find( "div" ).fadeTo( 200, 1.0 );
 			});
 		})
 		.delegate( "IMG", "mouseleave", function ( e ) {
+			console.log("mouseleave");
 			var $IMG = $( this );
 
 			$.doTimeout( "hoverIn" );
@@ -191,11 +196,11 @@ function final_code() {
 /* To follow the steps I took while live coding this,
    only uncomment one function at a time: */
 
-// first_try();
-// second_try();
-// third_try();
-// fourth_try();
-final_code();
+ //first_try();
+ //second_try();
+third_try();
+ //fourth_try();
+//final_code();
 
 
 

@@ -44,48 +44,35 @@
 				var path="avatars/"+members[i]+".jpg";
 				img=document.createElement("IMG");
 				img.src=path;
-				img.width=100;
-				img.width=100;
 				img.id=members[i];			
 				
 				var li=document.createElement("li");
 				li.appendChild(img);
 				
+				// <div>
 				var div=document.createElement("div");
 				div.style.opacity=1;
 				div.style.display="none";
 				div.setAttribute('class','portfolio-info-panel');
 				
-				var pa=document.createTextNode("Hi there and greetings!");
-				div.appendChild(pa);
+				var h=document.createElement("H2");
+				var t = document.createTextNode(img.id);
+				h.appendChild(t);
+				div.appendChild(h);
+				
+				var rect=document.createElement("IMG");
+				rect.src="avatars/"+members[i]+".png";
+				rect.width=2000;
+				rect.height=50;
+				div.appendChild(rect);
+				//</div>
 				
 				li.appendChild(div);
 				container.appendChild(li);
 			}
 		});
 	}
-	function assignOutMous(id,path){
-		image=document.getElementById(id);
-		stats=document.createElement("IMG");
-		stats.src="project1/rect.png";
-		
-		image.onmouseout=function(){
-			image=document.getElementById(id);
-			if(image.src!=path){
-				image.src=path;
-			}
-		}
-	}
-	function assignOnMous(id){
-		image=document.getElementById(id);
-		image.onmouseover=function(){
-			image=document.getElementById(id);
-			var path = "project1/rect.png";
-			if(image.src!=path){
-				image.src=path;
-			}
-		}
-	}
+
 
 
 

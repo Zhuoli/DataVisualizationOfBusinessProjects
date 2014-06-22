@@ -1,6 +1,6 @@
 Project Manager: Mike White
 Risk percentage: 15%
-Two pikes occured.
+Two spikes occured.
 This project may be delayed
 PM has a higher visit percentage
 Everyone works well
