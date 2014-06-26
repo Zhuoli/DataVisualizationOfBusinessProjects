@@ -1,6 +1,5 @@
 Project Manager: Jim Green
-Risk percentage: 30%
-Threepikes occured.
-This project may be delayed
-PM has a higher visit percentage
-Everyone works well
+Risk percentage: 10%
+PA didn't show up during init. phase
+Project Requirements changed during Development Phase
+Tony(Developer) didn't submit artifact before due date

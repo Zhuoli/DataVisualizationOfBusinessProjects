@@ -1,4 +1,4 @@
-Project Manager: Jim Green
+Project Manager: John
 Risk percentage: 30%
 Threepikes occured.
 This project may be delayed

@@ -1,6 +1,7 @@
 Project Manager: Mike White
-Risk percentage: 15%
+Risk percentage: 30%
 Two spikes occured.
+PM has a higher visit rate
+Abby's submissions were rejected again.
+Low communication frequency
 This project may be delayed
-PM has a higher visit percentage
-Everyone works well
